@@ -10,5 +10,4 @@ RUN pip install --no-cache-dir -r requirements
 
 COPY . .
 
-CMD [ "python" ,"./prog1.py"]
-
+CMD [ "python" ,"./prog1.py" ]

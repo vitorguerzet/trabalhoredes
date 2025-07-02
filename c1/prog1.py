@@ -1,3 +1,4 @@
+  GNU nano 4.8                        prog1.py                                  
 import socket
 import time
 import numpy as np
@@ -12,8 +13,6 @@ for i in range (k):
 
     matriz = np.random.randint(1, 10, (n, n))
 
-#    start_time = time.time()
-
     data = {
         'matriz': matriz,
         'start': start_time,
@@ -24,6 +23,13 @@ for i in range (k):
     tcp.connect((HOST, PORT))
     tcp.send(pickle.dumps(data))
     tcp.close()
+
 print('fim.')
+
+
+
+
+
+
 
 
