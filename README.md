@@ -73,9 +73,11 @@ Com os arquivos do diretório p3:
 docker build -t ptres .
 ```
 Para mandar para o docker hub:
+logar na maquina:
 ```
 docker login <usuáro>
 ```
+adicionar tag na imagem para o diretório no docker hub
 ```
 docker tag <usuario>/<diretorio>:<imagem>
 ```
@@ -87,6 +89,10 @@ docker tag vitorguerzet/trabredes:pdois
 ```
 ```
 docker tag vitorguerzet/trabredes:ptres
+```
+fazer push para o diretorio no docker hub
+```
+docker push <usuario>/<diretorio>:<imagem>
 ```
 ```
 docker push vitorguerzet/trabredes:pum
