@@ -22,52 +22,78 @@ instrução:
 primeira vez:
 
 na maquina de ip 192.168.124.66(g2):
+```
 docker pull vitorguerzet/trabredes:ptres
+```
+```
 docker run -p 6001:6001 -it --rm --name bazinga vitorguerzet/trabredes:ptres
-
+```
 na maquina de ip 192.168.124.2(g1):
+```
 docker pull vitorguerzet/trabredes:pdois
+```
+```
 docker run -p 6000:6000 -p 6001:6001 -it --rm --name bazinga vitorguerzet/trabredes:pdois
-
+```
 na maquina de ip 192.168.124.1(c1):
+```
 docker pull vitorguerzet/trabredes:pum
+```
+```
 docker run -p 6000:6000 -it --rm --name bazinga vitorguerzet/trabredes:pum
-
+```
 insira os valores desejados em c1.
 os resultados estarao em g2.
 
 para rodar novamente:
 
 na maquina de ip 192.168.124.66(g2):
-
+```
 docker run -p 6001:6001 -it --rm --name bazinga vitorguerzet/trabredes:ptres
-
+```
 na maquina de ip 192.168.124.2(g1):
-
+```
 docker run -p 6000:6000 -p 6001:6001 -it --rm --name bazinga vitorguerzet/trabredes:pdois
-
+```
 na maquina de ip 192.168.124.1(c1):
-
+```
 docker run -p 6000:6000 -it --rm --name bazinga vitorguerzet/trabredes:pum
-
+```
 Para criar uma imagem:
 Com os arquivos do diretório p1:
+```
 docker build -t pum .
+```
 Com os arquivos do diretório p2:
+```
 docker build -t pdois .
+```
 Com os arquivos do diretório p3:
+```
 docker build -t ptres .
-
+```
 Para mandar para o docker hub:
+```
 docker login <usuáro>
+```
 docker tag <usuario>/<diretorio>:<imagem>
-
+```
+```
 docker tag vitorguerzet/trabredes:pum
+```
+```
 docker tag vitorguerzet/trabredes:pdois
+```
+```
 docker tag vitorguerzet/trabredes:ptres
 ```
+```
 docker push vitorguerzet/trabredes:pum
+```
+```
 docker push vitorguerzet/trabredes:pdois
+```
+```
 docker push vitorguerzet/trabredes:ptres
 ```
 
