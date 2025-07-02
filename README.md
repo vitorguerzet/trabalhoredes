@@ -76,6 +76,7 @@ Para mandar para o docker hub:
 ```
 docker login <usuáro>
 ```
+```
 docker tag <usuario>/<diretorio>:<imagem>
 ```
 ```
