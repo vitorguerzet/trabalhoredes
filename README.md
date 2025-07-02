@@ -65,10 +65,10 @@ docker tag <usuario>/<diretorio>:<imagem>
 docker tag vitorguerzet/trabredes:pum
 docker tag vitorguerzet/trabredes:pdois
 docker tag vitorguerzet/trabredes:ptres
-'''
+```
 docker push vitorguerzet/trabredes:pum
 docker push vitorguerzet/trabredes:pdois
 docker push vitorguerzet/trabredes:ptres
-'''
+```
 
 
