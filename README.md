@@ -49,3 +49,26 @@ docker run -p 6000:6000 -p 6001:6001 -it --rm --name bazinga vitorguerzet/trabre
 na maquina de ip 192.168.124.1(c1):
 
 docker run -p 6000:6000 -it --rm --name bazinga vitorguerzet/trabredes:pum
+
+Para criar uma imagem:
+Com os arquivos do diretório c1:
+docker build -t pum .
+Com os arquivos do diretório g1:
+docker build -t pdois .
+Com os arquivos do diretório g2:
+docker build -t ptres .
+
+Para mandar para o docker hub:
+docker login <usuáro>
+docker tag <usuario>/<diretorio>:<imagem>
+
+docker tag vitorguerzet/trabredes:pum
+docker tag vitorguerzet/trabredes:pdois
+docker tag vitorguerzet/trabredes:ptres
+
+docker push vitorguerzet/trabredes:pum
+docker push vitorguerzet/trabredes:pdois
+docker push vitorguerzet/trabredes:ptres
+
+
+
