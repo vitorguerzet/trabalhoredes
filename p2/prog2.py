@@ -9,6 +9,7 @@ tcp = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 tcp.bind((HOST, PORT))
 tcp.listen(1)
 i=0
+h=input("digite o ip de p3: ")
 while True:
     i=i+1
     print("p2 aguardando matriz...")
@@ -35,12 +36,12 @@ while True:
 
 #    print(data2['det'])
     tcp2 = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    tcp2.connect(('192.168.124.66', 6001))
+    tcp2.connect((h, 6001))
     tcp2.send(pickle.dumps(data2))
     tcp2.close()
     k = data['k']
     if k==i: break
-print('fim.')
+print('Determinantes encontradas. Fim.')
 
 
 
