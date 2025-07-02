@@ -12,7 +12,7 @@ tcp.listen(1)
 i=0
 while True:
     i=i+1
-    print("p3 aguardando matriz invertida...")
+    print("p3 aguardando resultados..")
 
     con, addr = tcp.accept()
     packet=[]
