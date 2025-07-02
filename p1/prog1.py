@@ -1,13 +1,14 @@
-  GNU nano 4.8                        prog1.py                                  
 import socket
 import time
 import numpy as np
 import pickle
-
-HOST = '192.168.124.2'
+h=input("digite o ip de p2:")
+HOST = h
 PORT = 6000
 k = int(input("Digite o numero de matrizes:"))
+
 n = int(input("Digite o tamanho da matriz quadrada: "))
+
 start_time = time.time()
 for i in range (k):
 
@@ -24,7 +25,7 @@ for i in range (k):
     tcp.send(pickle.dumps(data))
     tcp.close()
 
-print('fim.')
+print('Matrizes enviadas. Fim.')
 
 
 
